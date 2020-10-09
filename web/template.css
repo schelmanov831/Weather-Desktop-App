@@ -1,0 +1,50 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(90deg, #1E90FF, #EE82EE);
+}
+
+#location {
+    display: block;
+    width: 500px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 50px;
+    font_size: 30px;
+    text-align: center;
+    outline: none;
+    background: rgba(255, 255, 255, .5)
+
+}
+
+#show {
+    display: block;
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+#separator{
+    content: '';
+    display: block;
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top: 4px solid rgba(255,255,255,.5);
+    border-radius: 10px;
+}
+
+#info{
+    display: block;
+    font_size: 40px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}

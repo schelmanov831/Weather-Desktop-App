@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Погода</title>
+
+    <script src="eel.js"></script>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="stylesheet" href="/template.css">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+          crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <input id="location" type="text" placeholder="Введите название города">
+    <button id = "show" class="btn btn-primary">Узнать погоду</button>
+
+    <div id="separator"></div>
+    <div id="info"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+            integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+            crossorigin="anonymous"></script>
+    <script>
+        async function display_weather(){
+            let place = document.getElementById('location').value;
+
+            document.getElementById('info').innerHTML = await  eel.get_weather(place)();
+        }
+        jQuery('#show').on('click',function (){
+            display_weather();
+        });
+    </script>
+
+</body>
+</html>
